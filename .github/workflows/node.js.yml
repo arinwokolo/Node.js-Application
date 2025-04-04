@@ -23,12 +23,12 @@ build:
     strategy:
     # A matrix build strategy to test against multiple versions of Node.js
     matrix:
-        node-version: [14.x, 16.x]
+        node-version: '18'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
 
     - # Sets up the specified version of Node.js
     name: Use Node.js ${{" matrix.node-version "}}
